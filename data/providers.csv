@@ -1,0 +1,11 @@
+id,name,specialty,location,phone,email,rating,years_experience,accepting_patients
+1,dr. john smith,cardiology,New York NY,(555) 123-4567,JOHN.SMITH@HOSPITAL.COM,4.8,15,true
+2,DR. SARAH JOHNSON,pediatrics,Los Angeles CA,555.234.5678,sarah.johnson@clinic.org,4.9,12,true
+3,michael chen,orthopedics,Chicago IL,1-555-345-6789,mchen@orthocenter.com,4.5,8,false
+4,emily davis,family medicine,Houston TX,5554567890,emily.davis@familymed.net,4.7,20,true
+5,robert wilson,neurology,Phoenix AZ,(555) 567-8901,rwilson@neuro.health,4.6,18,true
+6,lisa martinez,dermatology,Philadelphia PA,555-678-9012,l.martinez@skincare.com,4.4,10,true
+7,david brown,gastroenterology,San Antonio TX,1 555 789 0123,david.brown@gastro.med,4.3,7,false
+8,jennifer taylor,psychiatry,San Diego CA,(555)890-1234,jtaylor@mentalhealth.org,4.9,14,true
+9,william anderson,internal medicine,Dallas TX,555 901 2345,w.anderson@internal.med,4.5,22,true
+10,maria garcia,obstetrics,San Jose CA,+1-555-012-3456,mgarcia@womenshealth.com,4.8,16,true
