@@ -7,6 +7,11 @@
 import * as path from "path";
 import { ETLPipeline } from "./index";
 
+/**
+ * Demo script showing the ETL pipeline in action
+ * Runs the ETL pipeline in sync mode with mock data, prints out sample enriched provider data,
+ * and performs some vector searches
+ */
 async function main() {
   const csvPath = path.join(__dirname, "../data/providers.csv");
 

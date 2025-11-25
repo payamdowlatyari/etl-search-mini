@@ -27,6 +27,14 @@ export class ETLPipeline {
   private config: ETLConfig;
   private searchStore: VectorSearchStore;
 
+  /**
+   * Constructs an ETL pipeline instance with configuration options
+   * @param {ETLConfig} config - Configuration options for the pipeline
+   * @property {string} openaiApiKey - OpenAI API key
+   * @property {string} embeddingModel - Model used for generating embeddings
+   * @property {string} llmModel - Model used for generating LLM summaries
+   * @property {number} embeddingDimensions - Dimensions of the embedding vectors
+   */
   constructor(config: ETLConfig = {}) {
     this.config = {
       openaiApiKey: config.openaiApiKey || process.env.OPENAI_API_KEY,
@@ -69,13 +77,17 @@ export class ETLPipeline {
       enrichedProviders,
       this.config
     );
-    console.log(`  Generated embeddings for ${providersWithEmbeddings.length} providers`);
+    console.log(
+      `  Generated embeddings for ${providersWithEmbeddings.length} providers`
+    );
 
     // Step 5: Add to search store
     console.log("Step 5: Adding to search store...");
     this.searchStore.clear();
     this.searchStore.addProviders(providersWithEmbeddings);
-    console.log(`  Search store now contains ${this.searchStore.count()} providers`);
+    console.log(
+      `  Search store now contains ${this.searchStore.count()} providers`
+    );
 
     console.log("ETL pipeline complete!");
     return providersWithEmbeddings;
@@ -111,13 +123,17 @@ export class ETLPipeline {
       enrichedProviders,
       this.config.embeddingDimensions
     );
-    console.log(`  Generated embeddings for ${providersWithEmbeddings.length} providers`);
+    console.log(
+      `  Generated embeddings for ${providersWithEmbeddings.length} providers`
+    );
 
     // Step 5: Add to search store
     console.log("Step 5: Adding to search store...");
     this.searchStore.clear();
     this.searchStore.addProviders(providersWithEmbeddings);
-    console.log(`  Search store now contains ${this.searchStore.count()} providers`);
+    console.log(
+      `  Search store now contains ${this.searchStore.count()} providers`
+    );
 
     console.log("ETL pipeline complete!");
     return providersWithEmbeddings;
@@ -166,7 +182,11 @@ export {
   normalizeEmail,
   normalizeName,
 } from "./cleaner";
-export { enrichProviders, enrichProvidersSync, createMockEnrichedProvider } from "./enricher";
+export {
+  enrichProviders,
+  enrichProvidersSync,
+  createMockEnrichedProvider,
+} from "./enricher";
 export {
   generateEmbeddings,
   generateQueryEmbedding,
